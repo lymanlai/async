@@ -1,18 +1,11 @@
 # Async.js
 
-Async is a utility module which provides straight-forward, powerful functions
-for working with asynchronous JavaScript. Although originally designed for
-use with [node.js](http://nodejs.org), it can also be used directly in the
-browser. Also supports [component](https://github.com/component/component).
+Async是个为异步JavaScript编程提供直接了当、强大功能的工具模块。虽然原本的设计是工作在[node.js](http://nodejs.org)的，（但是）它也能直接在浏览器中使用。也支持[component](https://github.com/component/component)。
 
-Async provides around 20 functions that include the usual 'functional'
-suspects (map, reduce, filter, each…) as well as some common patterns
-for asynchronous control flow (parallel, series, waterfall…). All these
-functions assume you follow the node.js convention of providing a single
-callback as the last argument of your async function.
+Async提供了大概20个函数涵盖常用的功能 (map, reduce, filter, each…) 及一些异步流程控制(parallel, series, waterfall…)的通用模式。所有这些函数假定你遵守node.js的提供单回调函数为你的异步函数的最后一个参数的惯例。
 
 
-## Quick Examples
+## 实际例子
 
 ```javascript
 async.map(['file1','file2','file3'], fs.stat, function(err, results){
@@ -34,13 +27,11 @@ async.series([
 ]);
 ```
 
-There are many more functions available so take a look at the docs below for a
-full list. This module aims to be comprehensive, so if you feel anything is
-missing please create a GitHub issue for it.
+还有更多函数可以用敬请查看以下文档以获得完整列表。这个模块目标是成为一个全面的（模块），如果你觉得哪里有遗漏欢迎创建一个GitHub议题。
 
-## Common Pitfalls
+## 常见陷阱
 
-### Binding a context to an iterator
+### 绑定上下文到迭代器
 
 This section is really about bind, not about async. If you are wondering how to
 make async execute your iterators in a given context, or are confused as to why
